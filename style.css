@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+
+body {
+    background: url(bochkov.png) no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+
+}
+
+
+
+h1 {
+    background: rgba(255, 138, 167, 0.068);
+    color: rgb(240, 248, 255);
+    text-shadow: 5px 1px 4px rgba(1, 1, 1, 0.212);
+    backdrop-filter: blur(30px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.212);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    width: 400px;
+}
+
+audio {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    text-align: center;
+}
+
+audio {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    background: transparent;
+    border: none;
+
+    /* Белые иконки в целом (Chrome/Safari поддерживают color-scheme) */
+    color-scheme: dark;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    background: rgba(255, 138, 167, 0.068);
+
+}
+
+@keyframes timelineGradientFlow {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+audio::-webkit-media-controls-enclosure,
+audio::-webkit-media-controls-panel {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+audio::-webkit-media-controls-play-button {
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+/* Кнопки Play/Pause и Mute — белые */
+audio::-webkit-media-controls-play-button,
+audio::-webkit--media-controls-pause-button,
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff11 !important;
+    border-radius: 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Ховер — остаётся белым, слегка приглушаем */
+audio::-webkit-media-controls-play-button:hover,
+audio::-webkit-media-controls-pause-button:hover,
+audio::-webkit-media-controls-mute-button:hover,
+audio::-webkit-media-controls-overflow-button,
+audio::-webkit-media-controls-download-button {
+    background-color: #ffffff11 !important;
+    opacity: 0.85;
+}
+
+/* Таймлайн — красно-белый градиент */
+audio::-webkit-media-controls-timeline {
+    background: rgba(165, 102, 102, 0.274) !important;
+    border-radius: 4px;
+    margin-left: 10px;
+    background-size: 300% 100% !important;
+    border-radius: 4px;
+    margin-left: 10px;
+
+
+}
+
+/* Цвет цифр времени — белый */
+audio::-webkit-media-controls-current-time-display,
+audio::--media-controls-time-remaining-display {
+    color: #fff !important;
+    margin-right: 10px;
+}
+
+/* Ползунок громкости — белый */
+audio::-webkit-media-controls-volume-slider {
+    background: #ffffff11 !important;
+    border-radius: 4px;
+}
+
+audio::-webkit-media-controls-volume-slider-container {
+    background: transparent !important;
+}
+
+/* "Три точки"/меню/скачивание — белые (если поддерживается) */
+audio::-webkit-media-controls-overflow-button,
+audio::-webkit-media-controls-download-button {
+    filter: invert(1) brightness(2);
+    background: #ffffff11 !important;
+}
